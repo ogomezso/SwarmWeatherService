@@ -1,0 +1,45 @@
+version: "3"
+services:
+  api-weather-service:
+    image: api-weather-service
+    hostname: api-weather-service
+    ports:
+      - 8090:8090
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+    networks:
+      - local-frontend-network
+      - local-backend-network
+    deploy:
+      replicas: 2
+
+  weather-service:
+    image: weather-service
+    hostname: weather-service
+    ports:
+      - 8091:8091
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+    networks:
+      - local-backend-network
+    deploy:
+      replicas: 2
+
+  daas-weather-service:
+    image: daas-weather-service
+    hostname: daas-weather-service
+    ports:
+      - 8092:8092
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+    networks:
+      - local-backend-network
+    deploy:
+      replicas: 2
+networks:
+  local-frontend-network:
+    driver: overlay
+  local-backend-network:
+    driver: overlay
+
+

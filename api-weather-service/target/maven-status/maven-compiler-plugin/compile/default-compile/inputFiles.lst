@@ -1,0 +1,13 @@
+/media/oskar/DATOS/SwarmWeatherService/api-weather-service/src/main/java/com/ogomez/apiweatherservice/service/impl/ApiCallerServiceImpl.java
+/media/oskar/DATOS/SwarmWeatherService/api-weather-service/src/main/java/com/ogomez/apiweatherservice/config/DozerConfiguration.java
+/media/oskar/DATOS/SwarmWeatherService/api-weather-service/src/main/java/com/ogomez/apiweatherservice/config/SwaggerConfig.java
+/media/oskar/DATOS/SwarmWeatherService/api-weather-service/src/main/java/com/ogomez/apiweatherservice/config/AppConfig.java
+/media/oskar/DATOS/SwarmWeatherService/api-weather-service/src/main/java/com/ogomez/apiweatherservice/controller/ApiWeatherController.java
+/media/oskar/DATOS/SwarmWeatherService/api-weather-service/src/main/java/com/ogomez/apiweatherservice/config/ServiceConfig.java
+/media/oskar/DATOS/SwarmWeatherService/api-weather-service/src/main/java/com/ogomez/apiweatherservice/util/ResponseUtil.java
+/media/oskar/DATOS/SwarmWeatherService/api-weather-service/src/main/java/com/ogomez/apiweatherservice/config/DependenciesConfig.java
+/media/oskar/DATOS/SwarmWeatherService/api-weather-service/src/main/java/com/ogomez/apiweatherservice/dto/WeatherResponseDto.java
+/media/oskar/DATOS/SwarmWeatherService/api-weather-service/src/main/java/com/ogomez/apiweatherservice/ApiWeatherServiceApplication.java
+/media/oskar/DATOS/SwarmWeatherService/api-weather-service/src/main/java/com/ogomez/apiweatherservice/service/ApiCallerService.java
+/media/oskar/DATOS/SwarmWeatherService/api-weather-service/src/main/java/com/ogomez/apiweatherservice/dto/CitiesEnum.java
+/media/oskar/DATOS/SwarmWeatherService/api-weather-service/src/main/java/com/ogomez/apiweatherservice/dto/WeatherEntityDto.java

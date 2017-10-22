@@ -1,0 +1,17 @@
+version: '2'
+services:
+  postgresbdc:
+    image: postgres:9.3
+    container_name: postgresbdc
+    hostname: postgresbdc
+    ports:
+      - 5432:5432
+    cpu_shares: 102
+
+  provision:
+    image: provision
+    container_name: provision
+    hostname: provision
+    depends_on:
+      - postgresbdc
+    cpu_shares: 10

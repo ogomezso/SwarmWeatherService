@@ -1,0 +1,18 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: weather-service
+management:
+  security:
+    enabled: false
+service:
+   baseUrl: https://query.yahooapis.com
+   path: /v1/public/yql
+   query: select%20*%20from%20weather.forecast%20where%20woeid%20%3D%
+   format: json
+   dasWeatherServiceId: local-stack_daas-weather-service
+   dasWeatherServicePort: 8092
+   saveResponse: /api/v1/weatherAudit
+   getHistoric: /api/v1/weatherAudit/city({city}/prediction/{prediction}

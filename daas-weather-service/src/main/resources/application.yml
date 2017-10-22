@@ -1,0 +1,32 @@
+server:
+  port: 8092
+
+management:
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: daas-weather-service
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:postgresbdc}:${POSTGRES_PORT:5432}/${POSTGRES_DB:weather}?currentSchema=${POSTGRES_SCHEMA:weather}
+    username: ${POSTGRES_USERNAME:weatheruser}
+    password: ${POSTGRES_PASSWORD}
+    type: com.zaxxer.hikari.HikariDataSource
+    validationQuery: SELECT 1
+    hikari:
+      maximum-pool-size: 5
+      idle-timeout: 10000
+      minimum-idle: 1
+      connection-test-query: SELECT 1
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties.hibernate.generate_statistics: true
+
+flyway:
+  baselineOnMigrate: true
+

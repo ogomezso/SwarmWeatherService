@@ -1,0 +1,29 @@
+## docker stack deploy -c docker-stack-env.yml local-scd-stack --with-registry-auth
+version: "3"
+services:
+
+###ENVIRONMENT
+  postgresbdc:
+    image: postgres:9.3
+    hostname: postgresbdc
+    ports:
+      - 5432:5432
+    networks:
+      - local-backend-network
+
+
+  provision:
+    image: provision
+    hostname: provision
+    depends_on:
+      - postgresbdc
+    networks:
+      - local-backend-network
+    deploy:
+      restart_policy:
+        condition: on-failure
+        max_attempts: 1
+
+networks:
+  local-backend-network:
+    driver: overlay
