@@ -1,6 +1,0 @@
-#spring:
-#  cloud:
-#    consul:
-#      discovery:
-#        preferIpAddress: true
-#        queryPassing: true
